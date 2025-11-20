@@ -1,300 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio de Redações</title>
-  <style>
-    /* ===== ESTILO GERAL ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #f4f7f9;
-      color: #2e2e2e;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      backdrop-filter: blur(8px);
-    }
-
-    header h1 {
-      font-size: 1.3rem;
-      color: #444;
-      font-weight: 600;
-    }
-
-    /* ===== MENU HAMBURGUER ===== */
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      width: 25px;
-      height: 18px;
-      justify-content: space-between;
-    }
-
-    .menu-toggle span {
-      display: block;
-      height: 3px;
-      width: 100%;
-      background: #4e4e4e;
-      border-radius: 5px;
-      transition: all 0.3s;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100%;
-      width: 240px;
-      background: linear-gradient(180deg, #b5d0ff 0%, #b7f4e8 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      transition: 0.4s ease;
-      box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
-    }
-
-    nav.active {
-      right: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #1f1f1f;
-      font-size: 1.05rem;
-      font-weight: 500;
-      background-color: rgba(255,255,255,0.4);
-      padding: 0.4rem 1rem;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background-color: rgba(255,255,255,0.8);
-      transform: scale(1.05);
-    }
-
-    /* ===== SEÇÕES ===== */
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 6rem 2rem;
-      text-align: center;
-      transition: background 0.3s ease;
-    }
-
-    section:nth-child(odd) {
-      background: #eaf3fa;
-    }
-
-    section:nth-child(even) {
-      background: #f2f8f4;
-    }
-
-    section img {
-      width: 250px;
-      max-width: 80%;
-      border-radius: 12px;
-      margin-top: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      transition: transform 0.3s ease;
-    }
-
-    section img:hover {
-      transform: scale(1.05);
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: #355c7d;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background: linear-gradient(90deg, #c0d8ff, #c8f0df);
-      padding: 2rem;
-      text-align: center;
-      font-size: 1rem;
-      color: #333;
-    }
-
-    footer p {
-      font-weight: 500;
-    }
-
-    /* ===== RESPONSIVO ===== */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.1rem;
-      }
-
-      section h2 {
-        font-size: 1.5rem;
-      }
-
-      section img {
-        width: 200px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Redações</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== CABEÇALHO ===== -->
-  <header>
-    <h1>Portfólio de Redações</h1>
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span><span></span><span></span>
+<header>
+    <div class="logo">📘 PROJETO REDAÇÕES</div>
+
+    <nav id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#redacoes">Redações</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<section id="inicio" class="hero">
+    <h1>ADICIONANDO HISTÓRIAS<br>EM SUA VIDA!</h1>
+    <p>Textos que inspiram, emocionam e transformam.</p>
+    <a href="#contato" class="btn">CONTATE-NOS!</a>
+</section>
+
+<section id="redacoes" class="redacoes-list">
+    <h2>📚 Minhas Redações</h2>
+    <div class="grid">
+
+        <!-- 14 redações -->
+        <a class="card" href="redacao1.html">Redação 1</a>
+        <a class="card" href="redacao2.html">Redação 2</a>
+        <a class="card" href="redacao3.html">Redação 3</a>
+        <a class="card" href="redacao4.html">Redação 4</a>
+        <a class="card" href="redacao5.html">Redação 5</a>
+        <a class="card" href="redacao6.html">Redação 6</a>
+        <a class="card" href="redacao7.html">Redação 7</a>
+        <a class="card" href="redacao8.html">Redação 8</a>
+        <a class="card" href="redacao9.html">Redação 9</a>
+        <a class="card" href="redacao10.html">Redação 10</a>
+        <a class="card" href="redacao11.html">Redação 11</a>
+        <a class="card" href="redacao12.html">Redação 12</a>
+        <a class="card" href="redacao13.html">Redação 13</a>
+        <a class="card" href="redacao14.html">Redação 14</a>
+
     </div>
-  </header>
+</section>
 
-  <!-- ===== MENU ===== -->
-  <nav id="menu">
-    <a href="#introducao">Introdução</a>
-    <a href="#redacao1">Redação 1</a>
-    <a href="#redacao2">Redação 2</a>
-    <a href="#redacao3">Redação 3</a>
-    <a href="#redacao4">Redação 4</a>
-    <a href="#redacao5">Redação 5</a>
-    <a href="#redacao6">Redação 6</a>
-    <a href="#redacao7">Redação 7</a>
-    <a href="#redacao8">Redação 8</a>
-    <a href="#redacao9">Redação 9</a>
-    <a href="#redacao10">Redação 10</a>
-    <a href="#redacao11">Redação 11</a>
-    <a href="#redacao12">Redação 12</a>
-    <a href="#redacao13">Redação 13</a>
-    <a href="#redacao14">Redação 14</a>
-    <a href="#final">Finalização</a>
-  </nav>
+<section id="sobre" class="sobre">
+    <h2>Sobre o Projeto</h2>
+    <p>Este portfólio reúne minhas produções textuais, com foco em desenvolvimento, criatividade e evolução acadêmica.</p>
+</section>
 
-  <!-- ===== SEÇÕES ===== -->
-  <main>
-    <section id="introducao">
-      <h2>Introdução</h2>
-      <img src="https://picsum.photos/300?random=1" alt="Imagem introdução">
-    </section>
+<section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Email: <b>rafaela.bonato@escola.pr.gov.br</b></p>
+</section>
 
-    <section id="redacao1">
-      <h2>Redação 1</h2>
-      <img src="https://picsum.photos/300?random=2" alt="Imagem redação 1">
-    </section>
+<footer>
+    <p>© 2025 Projeto Redações — Criado com carinho.</p>
+</footer>
 
-    <section id="redacao2">
-      <h2>Redação 2</h2>
-      <img src="https://picsum.photos/300?random=3" alt="Imagem redação 2">
-    </section>
-
-    <section id="redacao3">
-      <h2>Redação 3</h2>
-      <img src="https://picsum.photos/300?random=4" alt="Imagem redação 3">
-    </section>
-
-    <section id="redacao4">
-      <h2>Redação 4</h2>
-      <img src="https://picsum.photos/300?random=5" alt="Imagem redação 4">
-    </section>
-
-    <section id="redacao5">
-      <h2>Redação 5</h2>
-      <img src="https://picsum.photos/300?random=6" alt="Imagem redação 5">
-    </section>
-
-    <section id="redacao6">
-      <h2>Redação 6</h2>
-      <img src="https://picsum.photos/300?random=7" alt="Imagem redação 6">
-    </section>
-
-    <section id="redacao7">
-      <h2>Redação 7</h2>
-      <img src="https://picsum.photos/300?random=8" alt="Imagem redação 7">
-    </section>
-
-    <section id="redacao8">
-      <h2>Redação 8</h2>
-      <img src="https://picsum.photos/300?random=9" alt="Imagem redação 8">
-    </section>
-
-    <section id="redacao9">
-      <h2>Redação 9</h2>
-      <img src="https://picsum.photos/300?random=10" alt="Imagem redação 9">
-    </section>
-
-    <section id="redacao10">
-      <h2>Redação 10</h2>
-      <img src="https://picsum.photos/300?random=11" alt="Imagem redação 10">
-    </section>
-
-    <section id="redacao11">
-      <h2>Redação 11</h2>
-      <img src="https://picsum.photos/300?random=12" alt="Imagem redação 11">
-    </section>
-
-    <section id="redacao12">
-      <h2>Redação 12</h2>
-      <img src="https://picsum.photos/300?random=13" alt="Imagem redação 12">
-    </section>
-
-    <section id="redacao13">
-      <h2>Redação 13</h2>
-      <img src="https://picsum.photos/300?random=14" alt="Imagem redação 13">
-    </section>
-
-    <section id="redacao14">
-      <h2>Redação 14</h2>
-      <img src="https://picsum.photos/300?random=15" alt="Imagem redação 14">
-    </section>
-
-    <section id="final">
-      <h2>Finalização e Agradecimentos</h2>
-      <img src="https://picsum.photos/300?random=16" alt="Imagem finalização">
-    </section>
-  </main>
-
-  <!-- ===== RODAPÉ ===== -->
-  <footer>
-    <p>© 2025 - Portfólio de Redações | Feito com 💙 e criatividade.</p>
-  </footer>
-
-  <!-- ===== SCRIPT JS ===== -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-      menuToggle.classList.toggle('open');
-    });
-
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('active');
-      });
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
